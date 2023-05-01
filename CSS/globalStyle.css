@@ -1,0 +1,107 @@
+/*
+    CSS GENERAL -> Son las propiedades CSS que yo utilicé ya que no las pude incluir con bootstrap propio.
+*/
+
+.input-custom {
+    background-color: rgba(74, 74, 74, 0.37) !important;
+    border: 1px solid #541C8C !important;
+    color: #fff !important;
+    /* transitions */
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center center;
+}
+
+.input-custom:hover {
+    transform: scale(1.1);
+}
+
+.label-custom {
+    color: #681CB4 !important;
+    background-color: transparent !important;
+}
+
+/*
+    ANIMACIONES --> SON NECESARIAS PARA QUE QUEDE FACHERA LA PAG (tocar sólo si se sabe)
+*/
+
+.btn-custom  {
+    border: 1px solid #000;
+    background-color: #541C8C;
+    color: #fff;
+
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+}
+
+.btn-custom:hover {
+    transform: scale(1.1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    box-shadow: 
+    1px 1px 3px #541C8C, 
+    -3px -3px 3px #681CB4
+}
+
+.enlargeNav {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+}
+  
+.enlargeNav:hover {
+    transform: scale(1.5);
+    margin-right: 25px;
+    margin-left: 25px;
+    box-shadow: 
+    5px 5px 10px #541C8C, 
+    -5px -5px 10px #681CB4
+}
+
+enlargeFooter {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+}
+  
+  
+.enlargeFooter:hover {
+    transform: scale(1.2);
+    margin-right: 25px;
+    margin-left: 25px;
+    box-shadow: 
+    5px 5px 10px #541C8C, 
+    -5px -5px 10px #681CB4
+}
+
+/* 
+    MEDIA QUERIES --> SON NECESARIAS PARA QUE NO SE ROMPA BOOTSTRAP; NO TOCAR
+*/
+
+@media (max-width: 992px) {
+    .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23681CB4' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .enlargeNav {
+        transition: transform 0.1s ease-in-out;
+        transform-origin: center center;
+    }
+      
+    .enlargeNav:hover {
+        box-shadow: 
+        5px 5px 10px #541C8C, 
+        -5px -5px 10px #681CB4
+    }
+
+    enlargeFooter {
+        transition: transform 0.1s ease-in-out;
+        transform-origin: center center;
+    }
+
+    .enlargeFooter:hover {
+        box-shadow: 
+        5px 5px 10px #541C8C, 
+        -5px -5px 10px #681CB4
+    }
+}
+  
+  
