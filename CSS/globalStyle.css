@@ -2,6 +2,13 @@
     CSS GENERAL -> Son las propiedades CSS que yo utilicé ya que no las pude incluir con bootstrap propio.
 */
 
+body{
+    color:  #681CB4;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .input-custom {
     background-color: rgba(74, 74, 74, 0.37) !important;
     border: 1px solid #541C8C !important;
@@ -19,8 +26,6 @@
     color: #681CB4 !important;
     background-color: transparent !important;
 }
-
-
 
 /*
     ANIMACIONES --> SON NECESARIAS PARA QUE QUEDE FACHERA LA PAG (tocar sólo si se sabe)
