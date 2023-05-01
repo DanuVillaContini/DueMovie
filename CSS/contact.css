@@ -1,0 +1,10 @@
+.imgContainer {
+    background-image: url(../Assets/Img/Contact/collageBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.input-textCustom {
+    height: 200px !important;
+    word-wrap: break-word;
+}
