@@ -1,3 +1,37 @@
+/*----- --- MODIFICACION BUTTONS GLOBALSTYLE --- -----*/
+.enlargeNav {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+}
+
+.enlargeNav:hover {
+    transform: scale(1.5);
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: rgba(0, 0, 0, .50);
+    box-shadow: 
+    5px 5px 10px #541C8C, 
+    -5px -5px 10px #681CB4;
+}
+.enlargeFooter {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+}
+.enlargeFooter:hover {
+    transform: scale(1.2);
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: rgba(0, 0, 0, .50);
+    box-shadow: 
+    5px 5px 10px #541C8C, 
+    -5px -5px 10px #681CB4
+}
+/*----- --- MODIFICACION BUTTONS GLOBALSTYLE --- -----*/
+
+
+/*----- --- HEADER CON LA MAIN MOVIE --- -----*/
 .main-movie{
     font-size: 16px;
     min-height: 48.62em;
@@ -6,3 +40,36 @@
     background-position: center center;
     background-size: cover;
 }
+.custom-btt-mainMovie{
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+}
+.custom-btt-mainMovie:hover {
+    transform: scale(1.1);
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: #541C8C;
+    box-shadow: rgba(0, 0, 0, .50);
+}
+/*----- ---FIN HEADER CON LA MAIN MOVIE --- -----*/
+
+
+/*----- --- CAROUSEL PELICULAS RECOMENDADAS --- -----*/
+.conteiner-carousel{ /*El scroll no me funca como quiero*/
+    overflow: hidden;
+    scroll-behavior: smooth  !important;
+}
+.custom-wrappers-posters{
+    padding: 0;
+}
+.custom-posters{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+.custom-posters:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+/*----- --- FIN CAROUSEL PELICULAS RECOMENDADAS --- -----*/

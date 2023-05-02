@@ -1,3 +1,12 @@
+body{
+    color:  #681CB4;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.custom-bg-navBar{
+    background-color: none;
+}
 .input-custom {
     background-color: rgba(74, 74, 74, 0.37) !important;
     border: 1px solid #541C8C !important;
@@ -39,6 +48,7 @@
     -3px -3px 3px #681CB4
 }
 
+
 .enlargeNav {
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
@@ -53,7 +63,7 @@
     -5px -5px 10px #681CB4
 }
 
-enlargeFooter {
+.enlargeFooter {
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
 }
