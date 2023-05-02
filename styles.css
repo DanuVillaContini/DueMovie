@@ -1,0 +1,12 @@
+#body {
+    background-color: black;
+  }
+
+button.btn.btn-primary {
+    background-color: #541C8C;
+    border-color: #681CB4;
+  }
+
+  #passreset {
+    color: #541C8C;
+  }
