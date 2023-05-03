@@ -1,12 +1,25 @@
+<!--Página o modal de Login
+El diseño de esta página es opcional.
+El formulario de login debe solicitar un nombre de usuario o email y contraseña. Estos campos deben estar correctamente validados.  
+Incorporar un link para recuperar la contraseña en caso de no recordarla, al presionar este link mostrar los pasos a seguir para poder recuperar la contraseña.
+Si me logueo como el usuario administrador, me debe redirigir a la web de administración, si el usuario y contraseña ingresados no existe, debo informar con un modal o alert.
+-->
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página de Inicio de Sesión</title>
   <link href="./styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css" />
+  <!-- ------ LINK FONTS ------ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
+
 <body id="body">
   <div class="container mt-5">
     <div class="row justify-content-center">
@@ -26,7 +39,8 @@
                 <input type="password" class="form-control" id="password" name="password" required>
               </div>
               <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" id="passreset">¿Olvidaste tu contraseña?</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" id="passreset">¿Olvidaste tu
+                contraseña?</a>
             </form>
           </div>
         </div>
@@ -35,7 +49,8 @@
   </div>
 
   <!-- Modal de Recuperación de Contraseña -->
-  <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+  <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -61,4 +76,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
   <script src="login.js"></script>
 </body>
+
 </html>

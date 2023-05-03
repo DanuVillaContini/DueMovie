@@ -1,3 +1,10 @@
+/* Página o modal de Login
+El diseño de esta página es opcional.
+El formulario de login debe solicitar un nombre de usuario o email y contraseña. Estos campos deben estar correctamente validados.  
+Incorporar un link para recuperar la contraseña en caso de no recordarla, al presionar este link mostrar los pasos a seguir para poder recuperar la contraseña.
+Si me logueo como el usuario administrador, me debe redirigir a la web de administración, si el usuario y contraseña ingresados no existe, debo informar con un modal o alert. */
+
+
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
