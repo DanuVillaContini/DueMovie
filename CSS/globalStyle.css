@@ -7,6 +7,16 @@ body{
 .custom-bg-navBar{
     background-color: none;
 }
+
+.form-custom {
+    border: 1px solid transparent !important;
+}
+
+.label-custom::after {
+    background-color: transparent !important;
+}
+
+
 .input-custom {
     background-color: rgba(74, 74, 74, 0.37) !important;
     border: 1px solid #541C8C !important;
@@ -21,7 +31,7 @@ body{
 }
 
 .label-custom {
-    color: #681CB4 !important;
+    color: #fff !important;
     background-color: transparent !important;
 }
 
@@ -98,7 +108,7 @@ body{
         -5px -5px 10px #681CB4
     }
 
-    enlargeFooter {
+    .enlargeFooter {
         transition: transform 0.1s ease-in-out;
         transform-origin: center center;
     }
