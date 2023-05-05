@@ -1,0 +1,11 @@
+
+
+.custom-bg{
+    background-image: url(/IMG/Error/bg-cinema-vip-dark.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

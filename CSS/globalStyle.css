@@ -1,12 +1,11 @@
-/*
-    CSS GENERAL -> Son las propiedades CSS que yo utilicé ya que no las pude incluir con bootstrap propio.
-*/
-
 body{
     color:  #681CB4;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+.custom-bg-navBar{
+    background-color: none;
 }
 
 .form-custom {
@@ -59,6 +58,7 @@ body{
     -3px -3px 3px #681CB4
 }
 
+
 .enlargeNav {
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
@@ -73,7 +73,7 @@ body{
     -5px -5px 10px #681CB4
 }
 
-enlargeFooter {
+.enlargeFooter {
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
 }
@@ -108,7 +108,7 @@ enlargeFooter {
         -5px -5px 10px #681CB4
     }
 
-    enlargeFooter {
+    .enlargeFooter {
         transition: transform 0.1s ease-in-out;
         transform-origin: center center;
     }
@@ -119,5 +119,3 @@ enlargeFooter {
         -5px -5px 10px #681CB4
     }
 }
-  
-  
