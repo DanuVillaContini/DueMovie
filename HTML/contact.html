@@ -11,6 +11,11 @@
 
     <link rel="stylesheet" href="../CSS/globalStyle.css">
     <link rel="stylesheet" href="../CSS/contact.css">
+
+    <!-- ------ LINK FONTS ------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-dark" style="overflow-x: hidden;">
@@ -21,7 +26,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand me-2 text-light" href="">
                     <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
-                        width="200" height="120" />
+                        width="130" height="100" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,20 +34,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link text-light enlargeNav " aria-current="page" href="../index.html">Principal</a>
-                        <a class="nav-link text-light enlargeNav " aria-current="page" href="../HTML/error.html">Duo</a>
-                        <a class="nav-link text-light enlargeNav " aria-current="page"
+                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">Principal</a>
+                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../HTML/error.html">Duo</a>
+                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page"
                             href="../HTML/register.html">Registrarse</a>
-                        <a class="nav-link text-light enlargeNav " aria-current="page" href="../HTML/login.html">Iniciar</a>
+                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../HTML/login.html">Iniciar</a>
                     </div>
-                    <form class="form-inline my-2 my-lg-0">
+                    <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
                         <div class="input-group">
+                            <input class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill" type="search"
+                            placeholder="Buscar..." aria-label="Search" id="searchButton">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="submit"><span
-                                        class="bi bi-search text-white" aria-hidden="true"></span></button>
+                                <button class="btn" type="submit"><span
+                                        class="bi bi-search text-white" aria-hidden="true"></span>
+                                </button>
                             </div>
-                            <input class="form-control bg-dark text-white btn-outline-secondary rounded-pill" type="search"
-                                placeholder="Buscar..." aria-label="Search">
                         </div>
                     </form>
                     <!-- tengo la necesidad de que el boton de busqueda este inserto dentro del search input... -->
@@ -61,7 +67,7 @@
                                 <input type="text" class="form-control rounded-3 input-custom" id="floatingInput" required>
                                 <label for="floatingInput" class="label-custom">Nombre</label>
                             </div>
-
+                            <!-- Podría también mutar la propiedad "nombre" -->
                             <div class="form-floating my-3">
                                 <input type="email" class="form-control rounded-3 input-custom" id="emailInput" required>
                                 <label for="floatingInput" class="label-custom">Email</label>
@@ -96,7 +102,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center my-1 align-items-center flex-column">
-                        <h2 class="text-light">Due Movie</h2>
+                        <h2 class="text-light mt-3">Due Movie</h2>
                         <img class="me-2" src="../Assets/Img/Gral/Vector.png" class="imgLogo" alt="vector due" width="190px"
                             height="20px" />
                     </div>
