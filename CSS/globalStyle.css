@@ -52,7 +52,7 @@ body{
     transform: scale(1.1);
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #000;
+    color: #efd8d8;
     box-shadow: 
     1px 1px 3px #541C8C, 
     -3px -3px 3px #681CB4
@@ -118,4 +118,52 @@ body{
         5px 5px 10px #541C8C, 
         -5px -5px 10px #681CB4
     }
+}
+
+.content-container {
+    position: relative;
+    z-index: 1;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+}
+
+#navbar.navbar-transparent {
+    background-color: transparent !important;
+}
+
+#navbar.navbar-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para navegadores basados en WebKit, como Safari y Chrome */
+}
+
+.popover-header {
+    background-color: dark !important;
+}
+  
+.popover-body {
+    background-color: dark !important;
+}
+  
+.text-custom {
+    color: #7d0feb;
+    text-shadow: 3px 4px 15px #a85df3;
+}
+
+.shadow-button {
+    transition: transform 1s ease-in-out;
+    transform-origin: center center;
+}
+
+
+.shadow-button:hover {
+    transform: scale(1.1);
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 
+    5px 5px 10px #541C8C, 
+    -5px -5px 10px #681CB4
+
 }

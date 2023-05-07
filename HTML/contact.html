@@ -16,75 +16,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    
 </head>
 
 <body class="bg-dark" style="overflow-x: hidden;">
 
-    <main class="min-h-100">
-        <!-- Navbar PARA CASI TODAS LAS PÁGINAS -->
-        <nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light" id="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand me-2 text-light" href="">
-                    <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
-                        width="130" height="100" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav mx-auto">
-                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">Principal</a>
-                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../HTML/error.html">Duo</a>
-                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page"
-                            href="../HTML/register.html">Registrarse</a>
-                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../HTML/login.html">Iniciar</a>
-                    </div>
-                    <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
-                        <div class="input-group">
-                            <input class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill" type="search"
-                            placeholder="Buscar..." aria-label="Search" id="searchButton">
-                            <div class="input-group-append">
-                                <button class="btn" type="submit"><span
-                                        class="bi bi-search text-white" aria-hidden="true"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- tengo la necesidad de que el boton de busqueda este inserto dentro del search input... -->
-                    <!-- En el hamburguesa se rompe, necesitamos ayuda aquí para la correción-->
+    <!-- Navbar PARA CASI TODAS LAS PÁGINAS -->
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand me-2 text-light" href="">
+                <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
+                    width="130" height="100" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link text-light enlargeNav fs-5" aria-current="page"
+                        href="../index.html">Principal</a>
+                    <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../HTML/error.html">Duo</a>
+                    <a class="nav-link text-light enlargeNav fs-5" aria-current="page"
+                        href="../HTML/register.html">Registrarse</a>
+                    <a class="nav-link text-light enlargeNav fs-5" aria-current="page"
+                        href="../HTML/login.html">Iniciar</a>
                 </div>
+                <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
+                    <div class="input-group">
+                        <input class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill"
+                            type="search" placeholder="Buscar..." aria-label="Search" id="searchButton">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit"><span class="bi bi-search text-white"
+                                    aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- tengo la necesidad de que el boton de busqueda este inserto dentro del search input... -->
+                <!-- En el hamburguesa se rompe, necesitamos ayuda aquí para la correción-->
             </div>
-        </nav>
-    
+        </div>
+    </nav>
+
+    <main class="content-container">
         <div class="flex-container imgContainer">
             <div class="container">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
                         <form id="formContact" class="w-50 my-5">
-                            
+
                             <div class="form-floating my-3">
-                                <input type="text" class="form-control rounded-3 input-custom" id="floatingInput" required>
+                                <input type="text" class="form-control rounded-3 input-custom" id="floatingInput"
+                                    required>
                                 <label for="floatingInput" class="label-custom">Nombre</label>
                             </div>
                             <!-- Podría también mutar la propiedad "nombre" -->
                             <div class="form-floating my-3">
-                                <input type="email" class="form-control rounded-3 input-custom" id="emailInput" required>
+                                <input type="email" class="form-control rounded-3 input-custom" id="emailInput"
+                                    required>
                                 <label for="floatingInput" class="label-custom">Email</label>
                             </div>
 
                             <div class="form-floating my-3">
-                                <input type="tel" class="form-control rounded-3 input-custom" id="whatsappInput" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" class="form-control rounded-3 input-custom" id="whatsappInput"
+                                    pattern="[0-9]{10}" maxlength="10" required>
                                 <label for="floatingInput" class="label-custom">WhatsApp</label>
                             </div>
 
                             <div class="form-floating my-3">
-                                <input type="text" class="form-control rounded-3 input-custom" id="subjectInput" required>
+                                <input type="text" class="form-control rounded-3 input-custom" id="subjectInput"
+                                    required>
                                 <label for="floatingInput" class="label-custom">Asunto</label>
                             </div>
 
                             <div class="form-floating my-3">
-                                <textarea class="form-control rounded-3 input-custom input-textCustom" id="detailsInput" rows="10" required></textarea>
+                                <textarea class="form-control rounded-3 input-custom input-textCustom" id="detailsInput"
+                                    rows="10" required></textarea>
                                 <label for="floatingInput" class="label-custom">Detalle del contacto</label>
                             </div>
 
@@ -96,43 +104,55 @@
                 </div>
             </div>
         </div>
-    
-        <!-- FOOTER PARA TODAS LAS PÁGINAS 150/80-->
-        <footer class="footer bg-dark">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center my-1 align-items-center flex-column">
-                        <h2 class="text-light mt-3">Due Movie</h2>
-                        <img class="me-2" src="../Assets/Img/Gral/Vector.png" class="imgLogo" alt="vector due" width="190px"
-                            height="20px" />
-                    </div>
-                </div>
-                <div class="row my-3">
-                    <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="../error.html">Terminos y
-                            Privacidad</a>
-                        <!-- esto podría abrir un modal también-->
-                    </div>
-                    <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Envíanos
-                            comentarios</a>
-                        <!-- esto podría abrír un modal que quede bien-->
-                    </div>
-                    <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Ayuda</a>
-                        <!-- esto podría abrir un modal tambien-->
-                    </div>
-                </div>
-                <div class="row my-3">
-                    <div class="col text-center">
-                        <p class="text-light mx-3">&#169 2023, Due Movie - Todos los derechos reservados.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
 
+    <!-- FOOTER PARA TODAS LAS PÁGINAS-->
+    <footer class="footer bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center my-1 align-items-center flex-column">
+                    <h2 class="text-light mt-3">Due Movie</h2>
+                    <img class="me-2" src="../Assets/Img/Gral/Vector.png" class="imgLogo" alt="vector due" width="190px"
+                        height="20px" />
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../error.html">Terminos y
+                        Privacidad</a>
+                    <!-- esto podría abrir un modal también-->
+                </div>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Envíanos
+                        comentarios</a>
+                    <!-- esto podría abrír un modal que quede bien-->
+                </div>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Ayuda</a>
+                    <!-- esto podría abrir un modal tambien-->
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col text-center">
+                    <p class="text-light mx-3">&#169 2023, Due Movie - Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 100) {
+                $("#navbar").addClass("navbar-transparent navbar-blur");
+            } else {
+                $("#navbar").removeClass("navbar-transparent navbar-blur");
+            }
+          });
+    </script>
+
+    <script src="../JS/globalJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
