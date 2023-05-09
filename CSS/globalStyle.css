@@ -5,7 +5,19 @@ body{
     font-size: 16px;
     background-color: rgba(0, 0, 0, 0);
   }
+  .container-fluid-details {
+    background-image: url('../assetsDetails/telonOscuro2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    
+}
   
+.custom-card{
+  background-color: transparent;
+    border: none;
+}
+/*
   .overlay-wrapper{
       position: relative;
       z-index: 100;
@@ -18,7 +30,7 @@ body{
       top: 0;
       opacity: .8;
       }
-  
+  */
       
   
   /*BOTON DE PLAY*/
