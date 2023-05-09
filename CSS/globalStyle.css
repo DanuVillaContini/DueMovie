@@ -167,3 +167,14 @@ body{
     -5px -5px 10px #681CB4
 
 }
+
+.gradiente {
+    background-image: linear-gradient(to bottom, #FFFFFF, #b8a7a7);
+    background-clip: text;
+    -webkit-background-clip: text; /* Para navegadores webkit como Safari y Chrome */
+    color: transparent;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+}

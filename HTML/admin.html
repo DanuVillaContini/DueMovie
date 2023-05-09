@@ -56,39 +56,80 @@
             </div>
         </nav>
 
-    <div class="container my-2">
+    <main>
+        <article class="container my-2">
+            <div class="row d-flex justify-content-center">
+                <div class="col-4">
+                    <div class="card rounded-5">
+                        <div class="card-body rounded-5" 
+                            style="background-image: linear-gradient(to bottom, #000000, #541C8C, #681CB4);">
+                            <h5 class="card-title mb-3 text-light"><i>Messi y the World CUP</i></h5>
+                            <div class="row mb-3">
+                                <div class="col-auto">
+                                    <span class="badge text-dark bg-info">FÚTBOL</span>
+                                    <span class="badge text-dark bg-info">MESSI</span>
+                                    <span class="badge text-dark bg-info">DRAMA</span>
+                                </div>
+                            </div>
+                            <p class="card-text mb-4 text-light">
+                                Cuenta la historia acerca de la vida de Lionel Messi
+                                y su transcurso a la gloria eterna.
+                            </p>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-auto">
+                                    <span class="text-warning">
+                                        <button type="button" class="btn text-warning" id="btnFirstStar">
+                                            <i class="bi bi-star-fill primeraStar"></i>
+                                        </button>
+                                        <button type="button" class="btn text-warning" id="btnFirstStar">
+                                            <i class="bi bi-star-fill primeraStar"></i>
+                                        </button>
+                                        <button type="button" class="btn text-warning" id="btnFirstStar">
+                                            <i class="bi bi-star-fill primeraStar"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </article>
 
-        <div class="row d-flex justify-content-around my-2 py-2 ">
-            <div class="col-6 ">
-                <h1 class="text-center text-custom"><i>Administración de Peliculas</i></h1>
+        <div class="container my-2">
+
+            <div class="row d-flex justify-content-around my-2 py-2 ">
+                <div class="col-6 ">
+                    <h1 class="text-center text-custom"><i>Administración de Peliculas</i></h1>
+                </div>
+                <div class="col-4 text-center">
+                    <button id="btn-modal" type="button" class="btn btn-custom my-2" data-bs-toggle="modal"
+                        data-bs-target="#examplemodal">
+                        <i class="bi bi-plus"></i>
+                        <i class="mx-1">Añadir Peli</i>
+                    </button>
+                </div>
             </div>
-            <div class="col-4 text-center">
-                <button id="btn-modal" type="button" class="btn btn-custom my-2" data-bs-toggle="modal"
-                    data-bs-target="#examplemodal">
-                    <i class="bi bi-plus"></i>
-                    <i class="mx-1">Añadir Peli</i>
-                </button>
+    
+            <div class="row bg-dark">
+                <table class="table text-white" id="tablaPeliculas">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">#</th>
+                            <th scope="col" class="text-center">Nombre</th>
+                            <th scope="col" class="text-center">Categoria</th>
+                            <th scope="col" class="text-center">Descripcion</th>
+                            <th scope="col" class="text-center">Publicado</th>
+                            <th scope="col" class="text-center">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div class="row bg-dark">
-            <table class="table text-white" id="tablaPeliculas">
-                <thead>
-                    <tr>
-                        <th scope="col" class="text-center">#</th>
-                        <th scope="col" class="text-center">Nombre</th>
-                        <th scope="col" class="text-center">Categoria</th>
-                        <th scope="col" class="text-center">Descripcion</th>
-                        <th scope="col" class="text-center">Publicado</th>
-                        <th scope="col" class="text-center">Opciones</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                </tbody>
-            </table>
-        </div>
-    </div>
-
+    </main>
+    
     <!--MODAL START-->
     <div class="modal fade" id="examplemodal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="examplemodalLabel" aria-hidden="true">
@@ -152,8 +193,29 @@
     </div>
     <!--MODAL END-->
 
+    <!-- Modal de error -->
+    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ha ocurrido un error.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN Modal de error -->
+      
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="../JS/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

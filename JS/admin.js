@@ -77,7 +77,7 @@ function borrarContenidoTabla(){
     let cuerpoTabla = document.getElementById('table-body'); 
     cuerpoTabla.innerHTML = ''
 }
-
+  
 // Visualizo las pelis del local storage
 function actualizarPeliculasPorLocalStorage() {
 
@@ -163,7 +163,7 @@ function actualizarPeliculasPorLocalStorage() {
         guardarPeliculas(biblioteca)
         borrarContenidoTabla()
         actualizarPeliculasPorLocalStorage()
-
+        // AMIGO NO TENGO NI IDEA COMO FUNCIONA PERO DEJENLO ASÍ PORFAVOR
     });
 
     const iconoEliminar = document.createElement('span');
@@ -185,6 +185,11 @@ function actualizarPeliculasPorLocalStorage() {
     const btnFavorito = document.createElement('button');
     btnFavorito.classList.add('btn', 'favButton', 'shadow-button');
     btnFavorito.id = `favID${i+1}`
+    btnFavorito.addEventListener('click', () => {
+        alert('No puedes cambiar la pelicula de Messi, es la única favorita...')
+        console.log("El problema consiste en que la lógica que implica es muy difícil, por eso esto queda en el backlog")
+    })
+    // la logica es muy difícil...
     const iconoFavorito = document.createElement('span');
     iconoFavorito.classList.add('bi', 'bi-star', 'text-white');
     iconoFavorito.setAttribute('aria-hidden', true);
