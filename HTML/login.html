@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio de Sesión</title>
+    <link href="../CSS/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/globalStyle.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css" />
+    <!-- ------ LINK FONTS ------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <!-- ----------------FORM LOGIN-------------------------- -->
+    <div class="container mt-5 ">
+        <div class="row justify-content-center ">
+            <div class="col-md-6 ">
+                <div class=" form">
+                    <div class="card-header">
+                        <h4 class="my-2 text-white text-center fs-2">Iniciar Sesión</h4>
+                    </div>
+                    <div class="card-body ">
+                        <form id="login-form" method="POST">
+                            <div class="mb-3 mx-3">
+                                <!-- <label for="username" class="form-label">Nombre de Usuario o Email</label> -->
+                                <label for="floatingInput" class="label-custom">Direccion Email / Correo Electronico </label>
+                                <input type="email" class="form-control input-custom " id="email" name="email" placeholder="name@example.com"
+                                required>
+
+                            </div>
+                            <div class="mb-3 mx-3">
+                                <!-- <label for="password" class="form-label">Contraseña</label> -->
+                                <label for="floatingPassword" class="label-custom">Contraseña</label>
+                                <input type="password" class="form-control input-custom " id="password" name="password" placeholder="Password"
+                                required>
+
+                            </div>
+                            <div class="text-center"><button class="btn btn-primary btn-custom my-2" type="submit" id="submit-button">Iniciar Sesión</button></div>
+                            <!-- <button type="submit" class="btn btn-primary">Iniciar Sesión</button> -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal"
+                                id="passreset" >¿Olvidaste tu
+                                contraseña?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CON MENSAJE DE LOGIN EXITOS O MSJ DE LOGUEO INCORRECTO-->
+        <!-- Estructura HTML del modal -->
+        <div id="modal-msg" class="modal ">
+            <div class="modal-dialog ">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Login</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-msg-text">Se ha registrado correctamente.</p>
+                    </div>
+                    <!-- <span class="close">&times;</span> -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary my-2 close btn-custom " onclick="cerrarModal()"
+                            data-bs-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Modal de Recuperación de Contraseña -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperación de Contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para recuperar tu contraseña, sigue estos pasos:</p>
+                    <ol>
+                        <li>Ve a la página de inicio de sesión.</li>
+                        <li>Haz clic en el enlace "¿Olvidaste tu contraseña?" debajo del formulario.</li>
+                        <li>Ingresa tu nombre de usuario o correo electrónico.</li>
+                        <li>Recibirás un correo electrónico con un enlace para restablecer tu contraseña.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary my-2  btn-custom" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="../JS/login.js"></script>
+    
+</body>
+
+</html>
