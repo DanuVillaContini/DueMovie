@@ -42,8 +42,21 @@ class Biblioteca {
     3. Botones del Modal
 */
 
+
+// let biblioteca
+// // Verificar si el Local Storage está disponible en el navegador
+// if (typeof localStorage !== 'undefined') {
+//     // Recuperar el contenido almacenado en el Local Storage
+//     jsonStorage = localStorage.getItem('pelis');
+//     biblioteca = JSON.parse(jsonStorage)
+
+// }else {
+//     biblioteca = new Biblioteca()
+//     console.log('Se generó una biblioteca.');
+// }
+
 const biblioteca = new Biblioteca()
- 
+
 let inputNombre = document.getElementById('nombre-input')
 let inputCategoria = document.getElementById('categoria-input')
 let inputDescripcion = document.getElementById('descripcion-input')
@@ -52,6 +65,18 @@ let inputNoPublicado = document.getElementById('nopublicado-input')
 
 let btnAgregar = document.getElementById('btn-modal-agregar')
 let btnLimpiar = document.getElementById('btn-modal-limpiar')
+
+// Botones de Modal para edición
+let btnGuardar = document.getElementById('btn-guardar')
+let btnVerificar = document.getElementById('btn-verificar')
+// Variables Globales para edición
+let valorArray
+let nombre
+let categoria 
+let descripcion
+let publicado
+let publicadoChange
+
 
 /*
     FUNCIONES [AQUÍ ESTÁN TODAS LAS FUNCIONES]
@@ -158,6 +183,7 @@ function actualizarPeliculasPorLocalStorage() {
     btnEliminar.id = `deleteID${i+1}`
 
     btnEliminar.addEventListener('click', (e) => {
+        e.preventDefault()
         console.log(`Se eliminó la fila ${i+1}`);
         biblioteca._peliculaArray.splice(i,1)
         guardarPeliculas(biblioteca)
@@ -174,7 +200,33 @@ function actualizarPeliculasPorLocalStorage() {
 
     const btnEditar = document.createElement('button');
     btnEditar.classList.add('btn', 'editButton', 'shadow-button');
+    btnEditar.setAttribute('data-bs-toggle', 'modal');
+    btnEditar.setAttribute('data-bs-target', '#miModal');
     btnEditar.id = `editID${i+1}`
+    btnEditar.addEventListener('click', (e) => {
+        e.preventDefault();
+        valorArray = e.target.closest('tr').firstChild.textContent
+        // con este código obtengo el valor para el index del array
+        checkboxes = document.querySelectorAll('.editable-field');
+
+        // obtengo un array de los checkboxes
+        checkboxes.forEach((item,index,checkboxes) => {
+            // checkboxes[index].parentNode.querySelector('.checkboxEdicion').checked
+            // todo ese chorizo selecciona el checkbox
+            let checkboxEdicion = checkboxes[index].parentNode.querySelector('.checkboxEdicion')
+            item.value = ''
+            checkboxEdicion.addEventListener('change', (e) => {
+
+                e.preventDefault()
+                if (checkboxEdicion.checked) {
+                    item.removeAttribute('disabled')
+                } else {
+                    item.value = ''
+                    item.setAttribute('disabled','disabled')
+                }
+            })
+        })
+    })
     const iconoEditar = document.createElement('span');
     iconoEditar.classList.add('bi', 'bi-pencil-square', 'text-white');
     iconoEditar.setAttribute('aria-hidden', true);
@@ -185,9 +237,21 @@ function actualizarPeliculasPorLocalStorage() {
     const btnFavorito = document.createElement('button');
     btnFavorito.classList.add('btn', 'favButton', 'shadow-button');
     btnFavorito.id = `favID${i+1}`
-    btnFavorito.addEventListener('click', () => {
-        alert('No puedes cambiar la pelicula de Messi, es la única favorita...')
-        console.log("El problema consiste en que la lógica que implica es muy difícil, por eso esto queda en el backlog")
+    let counter = 0
+    btnFavorito.addEventListener('click', (e) => {
+        e.preventDefault();
+        let fila = e.target.closest('tr')
+        let filasFav = document.querySelectorAll('tr.bg-success');
+
+        if (filasFav.length >= 3) {
+        // Deselecciona el último elemento 'tr' con la clase 'bg-success'
+        filasFav[filasFav.length - 1].classList.remove('bg-success');
+        }
+
+        if(fila) {
+            fila.classList.toggle('bg-success')
+            console.log(fila)
+        }
     })
     // la logica es muy difícil...
     const iconoFavorito = document.createElement('span');
@@ -227,6 +291,7 @@ function createMovie (event){
     }
 
     // agregamos la pelicula a la biblioteca
+    console.log(typeof(biblioteca))
     biblioteca.agregarPelicula(pelicula)
     // me lo guarda en el localstorage
     guardarPeliculas(biblioteca)
@@ -244,5 +309,40 @@ btnAgregar.addEventListener('click', createMovie)
 
 btnLimpiar.addEventListener('click', limpiarInputs)
 
+
+
 // Este hace que cada vez que entre a la página carge lo que exista en el localStorage.
-document.addEventListener('DOMContentLoaded', actualizarPeliculasPorLocalStorage);
+document.addEventListener('DOMContentLoaded', ()=>{
+    actualizarPeliculasPorLocalStorage()
+    btnGuardar.disabled = true
+});
+
+btnVerificar.addEventListener('click', (e) => {
+    e.preventDefault();
+    nombre = document.getElementById('txtNombre').value
+    categoria = document.getElementById('txtCategoria').value
+    descripcion = document.getElementById('txtDescripcion').value
+    publicado = document.getElementById('txtPublicado').value
+
+    if(nombre != '' && categoria != '' && descripcion != '' && publicado != '') {
+        btnGuardar.disabled = false
+        console.log('Se puede guardar los datos ahora.')
+    }else{
+        btnGuardar.disabled = true
+        alert('Debes rellenar todos los campos.')
+    }
+})
+btnGuardar.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log('Se registró correctamente los datos; se cambiará el objeto ' + valorArray)
+    // cambio
+    if(publicado == 'true'){
+        publicadoChange = true
+    }else{
+        publicadoChange = false
+    }
+
+    realizarCambio(nombre, cateogoria, descripcion, publicadoChange)
+
+    // con esto ya se tiene que hacer el cambio también necesito el "valorArray"
+})

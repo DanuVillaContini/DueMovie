@@ -213,7 +213,50 @@
         </div>
     </div>
     <!-- FIN Modal de error -->
-      
+    
+    <!-- Modal de Edición -->
+    <!-- Cambios en el HTML -->
+    <div class="modal fade bg-blur" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 bg-black">
+            <div class="modal-header fs-5">
+            <h5 class="modal-title fs-2" id="miModalLabel">Editor</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+            <ul class="list-group">
+                <li class="list-group-item customModalBackground">
+                    <input type="checkbox" class="checkboxEdicion" id="chkNombre">
+                    <label for="chkNombre label-custom" style="color: #f4e1e1;">Nombre</label>
+                    <input type="text" class="form-control editable-field input-custom" id="txtNombre" disabled required>
+                </li>
+                    <li class="list-group-item customModalBackground">
+                    <input type="checkbox" class="checkboxEdicion" id="chkCategoria">
+                    <label for="chkCategoria label-custom" style="color: #f4e1e1;">Categoría</label>
+                    <input type="text" class="form-control editable-field input-custom" id="txtCategoria" disabled required>
+                </li>
+                    <li class="list-group-item customModalBackground">
+                    <input type="checkbox" class="checkboxEdicion" id="chkDescripcion">
+                    <label for="chkDescripcion label-custom" style="color: #f4e1e1;">Descripción</label>
+                <input type="text" class="form-control editable-field input-custom" id="txtDescripcion" disabled required>
+                </li>
+                    <li class="list-group-item customModalBackground">
+                    <input type="checkbox" class="checkboxEdicion" id="chkPublicado">
+                    <label for="chkPublicado" style="color: #f4e1e1;">Publicado (true/false)</label>
+                    <input type="text" class="form-control editable-field input-custom" id="txtPublicado" disabled required>
+                </li>
+            </ul>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary" id="btn-verificar">Verificar</button>
+            <button type="button" class="btn btn-secondary" id="btn-guardar" data-bs-dismiss="modal">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Fin Modal edición-->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="../JS/admin.js"></script>
