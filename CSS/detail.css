@@ -32,16 +32,16 @@
   font-weight: bold;
 }
 
-buttonGi:hover {
+.buttonGi:hover {
   box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
   transition-delay: 0.6s;
 }
 
-buttonGi span {
+.buttonGi span {
   position: absolute;
 }
 
-buttonGi span:nth-child(1) {
+.buttonGi span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -49,12 +49,12 @@ buttonGi span:nth-child(1) {
   background: linear-gradient(90deg, transparent, #ae00ff);
 }
 
-buttonGi:hover span:nth-child(1) {
+.buttonGi:hover span:nth-child(1) {
   left: 100%;
   transition: 0.7s;
 }
 
-buttonGi span:nth-child(3) {
+.buttonGi span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -62,13 +62,13 @@ buttonGi span:nth-child(3) {
   background: linear-gradient(90deg, transparent, #001eff);
 }
 
-buttonGi:hover span:nth-child(3) {
+.buttonGi:hover span:nth-child(3) {
   right: 100%;
   transition: 0.7s;
   transition-delay: 0.35s;
 }
 
-buttonGi span:nth-child(2) {
+.buttonGi span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -76,13 +76,13 @@ buttonGi span:nth-child(2) {
   background: linear-gradient(180deg, transparent, #ae00ff);
 }
 
-buttonGi:hover span:nth-child(2) {
+.buttonGi:hover span:nth-child(2) {
   top: 100%;
   transition: 0.7s;
   transition-delay: 0.17s;
 }
 
-buttonGi span:nth-child(4) {
+.buttonGi span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -90,13 +90,13 @@ buttonGi span:nth-child(4) {
   background: linear-gradient(360deg, transparent, #001eff);
 }
 
-buttonGi:hover span:nth-child(4) {
+.buttonGi:hover span:nth-child(4) {
   bottom: 100%;
   transition: 0.7s;
   transition-delay: 0.52s;
 }
 
-buttonGi:active {
+.buttonGi:active {
   background: #ae00af;
   background: linear-gradient(to top right, #ae00af, #001eff);
   color: #bfbfbf;
@@ -104,7 +104,7 @@ buttonGi:active {
   transition: 0.1s;
 }
 
-buttonGi:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+.buttonGi:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
   transition: none;
   transition-delay: none;
 }
