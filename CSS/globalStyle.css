@@ -60,6 +60,7 @@ body{
 
 
 .enlargeNav {
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
 }
@@ -177,4 +178,8 @@ body{
 
 .custom-tooltip {
     --bs-tooltip-bg: var(--bs-primary);
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
 }

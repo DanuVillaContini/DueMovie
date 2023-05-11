@@ -205,7 +205,7 @@ function actualizarPeliculasPorLocalStorage() {
         valorArray = e.target.closest('tr').firstChild.textContent
         // con este código obtengo el valor para el index del array
         checkboxes = document.querySelectorAll('.editable-field');
-
+        console.log(checkboxes);
         // obtengo un array de los checkboxes
         checkboxes.forEach((item,index,checkboxes) => {
             // checkboxes[index].parentNode.querySelector('.checkboxEdicion').checked
@@ -288,7 +288,6 @@ function createMovie (event){
     }
 
     // agregamos la pelicula a la biblioteca
-    console.log(typeof(biblioteca))
     biblioteca.agregarPelicula(pelicula)
     // me lo guarda en el localstorage
     guardarPeliculas(biblioteca)
@@ -296,6 +295,9 @@ function createMovie (event){
     limpiarInputs()    
     borrarContenidoTabla();
     actualizarPeliculasPorLocalStorage()
+    inputNombre.value = ''
+    inputCategoria.value = ''
+    inputDescripcion.value = ''
 }
 
 function realizarCambio(nombre, categoria, descripcion, valor){
@@ -368,27 +370,9 @@ btnGuardar.addEventListener('click', (e) => {
     if(publicado == 'true' || publicado == 'TRUE'){
         realizarCambio(nombre, categoria, descripcion, true)
         // Realizo cambio, deshabilito boton y borro inputs
-        btnGuardar.disabled = true
-        nombre = ''
-        categoria = ''
-        descripcion = ''
-        publicado = ''
-        nombreCheckbox.checked = false
-        categoriaCheckbox.checked = false
-        descripcionCheckbox.checked = false
-        publicadoCheckbox.checked = false
     }else{
         realizarCambio(nombre, categoria, descripcion, false)
         // Realizo cambio, deshabilito boton y borro inputs
-        btnGuardar.disabled = true
-        nombre = ''
-        categoria = ''
-        descripcion = ''
-        publicado = ''
-        nombreCheckbox.checked = false
-        categoriaCheckbox.checked = false
-        descripcionCheckbox.checked = false
-        publicadoCheckbox.checked = false
     }
 
     realizarCambio(nombre, categoria, descripcion, publicadoChange)

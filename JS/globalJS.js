@@ -8,4 +8,6 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
+function redirigirError( ){
+  window.location.href="./HTML/error.html";
+}
