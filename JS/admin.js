@@ -332,9 +332,16 @@ btnLimpiar.addEventListener('click', limpiarInputs)
 
 
 // Este hace que cada vez que entre a la página carge lo que exista en el localStorage.
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', ()=> {
     actualizarPeliculasPorLocalStorage()
     btnGuardar.disabled = true
+
+    biblioteca = new Biblioteca()
+    let pelisArray = JSON.parse(localStorage.getItem('pelis'));
+    let cantidadElementos = pelisArray._peliculaArray.length 
+    for(let i = 0; i < cantidadElementos; i++){
+        biblioteca.agregarPelicula(pelisArray._peliculaArray[0])
+    }
 });
 
 btnVerificar.addEventListener('click', (e) => {
