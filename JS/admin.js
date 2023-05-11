@@ -205,7 +205,6 @@ function actualizarPeliculasPorLocalStorage() {
         valorArray = e.target.closest('tr').firstChild.textContent
         // con este código obtengo el valor para el index del array
         checkboxes = document.querySelectorAll('.editable-field');
-        console.log(checkboxes);
         // obtengo un array de los checkboxes
         checkboxes.forEach((item,index,checkboxes) => {
             // checkboxes[index].parentNode.querySelector('.checkboxEdicion').checked
@@ -331,7 +330,6 @@ btnLimpiar.addEventListener('click', limpiarInputs)
 document.addEventListener('DOMContentLoaded', ()=> {
     actualizarPeliculasPorLocalStorage()
     btnGuardar.disabled = true
-
     biblioteca = new Biblioteca()
     let pelisArray = JSON.parse(localStorage.getItem('pelis'));
     let cantidadElementos = pelisArray._peliculaArray.length
@@ -374,8 +372,5 @@ btnGuardar.addEventListener('click', (e) => {
         realizarCambio(nombre, categoria, descripcion, false)
         // Realizo cambio, deshabilito boton y borro inputs
     }
-
-    realizarCambio(nombre, categoria, descripcion, publicadoChange)
-
     // con esto ya se tiene que hacer el cambio también necesito el "valorArray"
 })

@@ -12,6 +12,13 @@ class NewUser {
     }
 }
 
+//------------------- VARIABLES DE ADMINISTRADOR : ROLES -----------------
+// let adminDani = new NewUser('daniAdmin@gmail.com', 'dani123', 'Daniela', 'Villa');
+// let adminFrancisco = new NewUser('franAdmin@gmail.com', 'fran123', 'Francisco', 'Perez');
+// let adminGi = new NewUser('giAdmin@gmail.com', 'gi123', 'Gi', 'Delgado');
+// let adminTania = new NewUser('taniaAdmin@gmail.com', 'tania123', 'Tania', 'Santucho');
+// let adminFlor = new NewUser('florAdmin@gmail.com', 'flor123', 'Flor', 'Jorrat');
+
 
 //-------------------VARIABLES DE LOS MODALS------------------------------
 let modalMensajeExito = document.getElementById("modal-msg");

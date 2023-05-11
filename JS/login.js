@@ -42,10 +42,11 @@ function login(event) {
 
     //---- VALIDADO LOS DATO = REDIRIGIR A PAGE ADMIN (si no, modal alert)------
     if (user) {
-        window.location.href = 'admin.html';
-        // falta agregar una validación solo para que:
-        // el usuario: admin ; gmail: admin@gmail.com ; password: admin
-        // pueda ingresar...
+        if(user.email != 'adminDani@gmail.com' && user.pass != 'dani123'){
+            window.location.href = '../index.html'
+        }else{
+            window.location.href = 'admin.html';
+        }
     } else {
         mostrarModal('Email o password incorrectos.')
         
