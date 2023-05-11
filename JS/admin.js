@@ -24,7 +24,7 @@ class Biblioteca {
 
     // Constructor
     constructor(){
-        this._peliculaArray = [];
+        this._peliculaArray = []
     }
 
     agregarPelicula(pelicula){
@@ -55,7 +55,7 @@ class Biblioteca {
 //     console.log('Se generó una biblioteca.');
 // }
 
-const biblioteca = new Biblioteca()
+let biblioteca = new Biblioteca()
 
 let inputNombre = document.getElementById('nombre-input')
 let inputCategoria = document.getElementById('categoria-input')
@@ -105,7 +105,6 @@ function borrarContenidoTabla(){
   
 // Visualizo las pelis del local storage
 function actualizarPeliculasPorLocalStorage() {
-
 
     let tablaPelicula = document.getElementById('tablaPeliculas');
     // Paso numero 0 elimino el table body actual:
@@ -301,6 +300,27 @@ function createMovie (event){
     actualizarPeliculasPorLocalStorage()
 }
 
+function realizarCambio(nombre, categoria, descripcion, publicadoChange){
+    let pelisJSON = localStorage.getItem('pelis');
+    let pelisArray = JSON.parse(pelisJSON);
+    
+    // console.log(typeof(pelisJSON)) // string
+    // console.log(typeof(pelisArray)) // objeto
+    // // el de arriba es el objeto {_peliculaArray: Array(n)}
+    // console.log(pelisArray._peliculaArray) // me da un array que adentro tiene un objeto [{…}]
+    // console.log(pelisArray._peliculaArray[valorArray-1]) // me devuelve la posición necesaria
+    // // entonces
+    pelisArray._peliculaArray[valorArray-1]._nombre = nombre
+    pelisArray._peliculaArray[valorArray-1]._categoria = categoria
+    pelisArray._peliculaArray[valorArray-1]._descripcion = descripcion
+    pelisArray._peliculaArray[valorArray-1]._publicado = publicado
+    guardarPeliculas(pelisArray)
+    borrarContenidoTabla()
+    actualizarPeliculasPorLocalStorage()
+}
+
+// Eventos
+
 // Evento que recibe los datos del form
 
 btnAgregar.addEventListener('click', createMovie)
@@ -332,6 +352,7 @@ btnVerificar.addEventListener('click', (e) => {
         alert('Debes rellenar todos los campos.')
     }
 })
+
 btnGuardar.addEventListener('click', (e) => {
     e.preventDefault()
     console.log('Se registró correctamente los datos; se cambiará el objeto ' + valorArray)
@@ -342,7 +363,7 @@ btnGuardar.addEventListener('click', (e) => {
         publicadoChange = false
     }
 
-    realizarCambio(nombre, cateogoria, descripcion, publicadoChange)
+    realizarCambio(nombre, categoria, descripcion, publicadoChange)
 
     // con esto ya se tiene que hacer el cambio también necesito el "valorArray"
 })
