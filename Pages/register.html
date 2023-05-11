@@ -17,6 +17,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <!-- Etiquetas Meta para SEO -->
+    <meta name="description" content="Página de videos con películas, series y funciones de administración.">
+    <meta name="keywords" content="películas, series, videos, administración">
+    <meta name="author" content="DueMovie">
+
+    <!-- Etiquetas Meta para redes sociales -->
+    <meta property="og:title" content="Página de Videos">
+    <meta property="og:description"
+        content="Disfruta de películas y series en nuestro sitio web. Administra tu contenido fácilmente.">
+
+    <!-- Otros metadatos -->
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
 </head>
 
 <body class="bg-dark" style="overflow-x: hidden;">
@@ -25,12 +39,14 @@
         <!-- Navbar PARA CASI TODAS LAS PÁGINAS -->
         <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-bs-theme="dark" id="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand me-2 text-light" href="/index.html"> <!-- cambien w y h de logo-->
-                    <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo" width="130" height="100" />
+                <a class="navbar-brand me-2 text-light" href="../index.html"> <!-- cambien w y h de logo-->
+                    <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
+                        width="130" height="100" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
@@ -38,11 +54,11 @@
                     </div>
                     <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
                         <div class="input-group">
-                            <input class="form-control  text-white btn-outline-secondary form-custom rounded-pill" type="search"
-                            placeholder="Buscar..." aria-label="Search" id="searchButton">
+                            <input class="form-control  text-white btn-outline-secondary form-custom rounded-pill"
+                                type="search" placeholder="Buscar..." aria-label="Search" id="searchButton">
                             <div class="input-group-append">
-                                <button class="btn" type="submit"><span
-                                        class="bi bi-search text-white" aria-hidden="true"></span>
+                                <button class="btn" type="submit"><span class="bi bi-search text-white"
+                                        aria-hidden="true"></span>
                                 </button>
                             </div>
                         </div>
@@ -63,16 +79,17 @@
                         </div>
                         <form id="login-form">
                             <div class="form-floating my-2">
-                                <input type="email" class="form-control" id="email-input" name="email" placeholder="name@example.com"
-                                    required>
+                                <input type="email" class="form-control" id="email-input" name="email"
+                                    placeholder="name@example.com" required>
                                 <label for="floatingInput">Direccion Email</label>
                             </div>
                             <div class="form-floating my-2">
-                                <input type="password" class="form-control" id="password-input" name="password" placeholder="Password"
-                                    required>
+                                <input type="password" class="form-control" id="password-input" name="password"
+                                    placeholder="Password" required>
                                 <label for="floatingPassword">Contraseña</label>
                                 <div id="passwordHelpBlock" class="form-text text-white">
-                                    Tu password debe contener entre 8-20 caracteres, contener letras y numeros, y no debe contener
+                                    Tu password debe contener entre 8-20 caracteres, contener letras y numeros, y no
+                                    debe contener
                                     espacios, caracteres especiales o emojis.
                                 </div>
                             </div>
@@ -82,20 +99,21 @@
                                 <label for="floatingInput">Primer Nombre</label>
                             </div>
                             <div class="form-floating my-2">
-                                <input type="text" class="form-control" id="lastName-input" name="lastname" placeholder="Segundo Nombre"
-                                    required>
+                                <input type="text" class="form-control" id="lastName-input" name="lastname"
+                                    placeholder="Segundo Nombre" required>
                                 <label for="floatingInput">Apellido</label>
                             </div>
-                            <div class="text-center py-2"><button class="btn btn-primary btn-custom my-2" type="button" onclick="guardarRegistro()"id="register-button">Registrarse</button></div>
+                            <div class="text-center py-2"><button class="btn btn-primary btn-custom my-2" type="button"
+                                    onclick="guardarRegistro()" id="register-button">Registrarse</button></div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    
-    
-    
-    
+
+
+
+
         <!-- ------MODAL CON MENSAJE LLENAR TODOS LOS CAMPOS ------ -->
         <div class="modal" tabindex="-1" id="modal-msg-advertencia">
             <div class="modal-dialog">
@@ -104,13 +122,14 @@
                         <p>Debes llenar todos los campos para poder registrarte.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary close" onclick="cerrarModalAdv()" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary close" onclick="cerrarModalAdv()"
+                            data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-    
-    
+
+
         <!-- -------MODAL DE MENSAJE DE REGISTRO EXITOSO ------- -->
         <div class="modal" tabindex="-1" id="modal-msg">
             <div class="modal-dialog">
@@ -126,8 +145,8 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary close" onclick="cerrarModal()"
                             data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-custom text-white"><a
-                                href="login.html" class="text-white">Login</a></button>
+                        <button type="button" class="btn btn-custom text-white"><a href="login.html"
+                                class="text-white">Login</a></button>
                     </div>
                 </div>
             </div>
@@ -146,19 +165,20 @@
                 </div>
                 <div class="row my-3">
                     <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Terminos y
+                        <a class="nav-link text-light enlargeFooter" aria-current="page"
+                            href="../Pages/error.html">Terminos y
                             Privacidad</a>
                         <!-- esto podría abrir un modal también-->
                     </div>
                     <div class="col-12 col-md-4 text-center my-2">
                         <a class="nav-link text-light enlargeFooter" aria-current="page"
-                            href="../HTML/error.html">Envíanos
+                            href="../Pages/error.html">Envíanos
                             comentarios</a>
                         <!-- esto podría abrír un modal que quede bien-->
                     </div>
                     <div class="col-12 col-md-4 text-center my-2">
                         <a class="nav-link text-light enlargeFooter" aria-current="page"
-                            href="../HTML/error.html">Ayuda</a>
+                            href="../Pages/error.html">Ayuda</a>
                         <!-- esto podría abrir un modal tambien-->
                     </div>
                 </div>

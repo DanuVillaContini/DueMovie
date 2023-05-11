@@ -6,7 +6,7 @@ Si me logueo como el usuario administrador, me debe redirigir a la web de admini
 */
 
 #body {
-  background-image: url(../IMG/Login/bg.jpg);
+  background-image: url(../Assets/Img/Login/bg.jpg);
   opacity: 0.9;
   background-size: cover;
 }

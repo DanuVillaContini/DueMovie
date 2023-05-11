@@ -13,6 +13,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <!-- Etiquetas Meta para SEO -->
+    <meta name="description" content="Página de videos con películas, series y funciones de administración.">
+    <meta name="keywords" content="películas, series, videos, administración">
+    <meta name="author" content="DueMovie">
+
+    <!-- Etiquetas Meta para redes sociales -->
+    <meta property="og:title" content="Página de Videos">
+    <meta property="og:description"
+        content="Disfruta de películas y series en nuestro sitio web. Administra tu contenido fácilmente.">
+
+    <!-- Otros metadatos -->
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
 </head>
 
 <body id="body">
@@ -29,21 +43,23 @@
                         <form id="login-form" method="POST">
                             <div class="mb-3 mx-3">
 
-                                <label for="floatingInput" class="label-custom">Direccion Email / Correo Electronico </label>
-                                <input type="email" class="form-control input-custom " id="email" name="email" placeholder="name@example.com"
-                                required>
+                                <label for="floatingInput" class="label-custom">Direccion Email / Correo Electronico
+                                </label>
+                                <input type="email" class="form-control input-custom " id="email" name="email"
+                                    placeholder="name@example.com" required>
 
                             </div>
                             <div class="mb-3 mx-3">
 
                                 <label for="floatingPassword" class="label-custom">Contraseña</label>
-                                <input type="password" class="form-control input-custom " id="password" name="password" placeholder="Password"
-                                required>
+                                <input type="password" class="form-control input-custom " id="password" name="password"
+                                    placeholder="Password" required>
 
                             </div>
-                            <div class="text-center"><button class="btn btn-primary btn-custom my-2" type="submit" id="submit-button">Iniciar Sesión</button></div>
+                            <div class="text-center"><button class="btn btn-primary btn-custom my-2" type="submit"
+                                    id="submit-button">Iniciar Sesión</button></div>
                             <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal"
-                                id="passreset" >¿Olvidaste tu
+                                id="passreset">¿Olvidaste tu
                                 contraseña?</a>
                         </form>
                     </div>
@@ -53,24 +69,24 @@
     </div>
 
     <!-- MODAL CON MENSAJE DE LOGIN EXITOS O MSJ DE LOGUEO INCORRECTO-->
-        <!-- Estructura HTML del modal -->
-        <div id="modal-msg" class="modal ">
-            <div class="modal-dialog ">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h2 class="modal-title">Login</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p id="modal-msg-text">Se ha registrado correctamente.</p>
-                    </div>
+    <!-- Estructura HTML del modal -->
+    <div id="modal-msg" class="modal ">
+        <div class="modal-dialog ">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h2 class="modal-title">Login</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-msg-text">Se ha registrado correctamente.</p>
+                </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary my-2 close btn-custom " onclick="cerrarModal()"
-                            data-bs-dismiss="modal">Ok</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary my-2 close btn-custom " onclick="cerrarModal()"
+                        data-bs-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Modal de Recuperación de Contraseña -->
     <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
@@ -91,7 +107,8 @@
                     </ol>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary my-2  btn-custom" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary my-2  btn-custom"
+                        data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -99,7 +116,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
     <script src="../JS/login.js"></script>
-    
+
 </body>
 
 </html>

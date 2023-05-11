@@ -10,57 +10,73 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS/globalStyle.css">
     <link rel="stylesheet" href="../CSS/admin.css">
+
+
+    <!-- Etiquetas Meta para SEO -->
+    <meta name="description" content="Página de videos con películas, series y funciones de administración.">
+    <meta name="keywords" content="películas, series, videos, administración">
+    <meta name="author" content="DueMovie">
+
+    <!-- Etiquetas Meta para redes sociales -->
+    <meta property="og:title" content="Página de Videos">
+    <meta property="og:description"
+        content="Disfruta de películas y series en nuestro sitio web. Administra tu contenido fácilmente.">
+
+    <!-- Otros metadatos -->
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
 </head>
 
 <body class="bg-dark">
 
-<nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light" id="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand me-2 text-light" href="">
-                    <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
-                        width="130" height="100" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav mx-auto">
-                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">
-                            <i class="bi bi-house fs-5"></i>
-                        </a>
-                        <a tabindex="0" class="btn btn-lg text-light text-light enlargeNav fs-5" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
-                            data-bs-title="Tipo de cuenta" data-bs-content="Actualmente te encuentras en una cuenta con el Rol de Administrador">
-                            <i class="bi bi-person"></i>
-                        </a>
-                        <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">
-                            <i class="bi bi-x"></i>
-                        </a>
-                        </button>
-                    </div>
-                    <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
-                        <div class="input-group">
-                            <input class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill" type="search"
-                            placeholder="Buscar..." aria-label="Search" id="searchButton">
-                            <div class="input-group-append">
-                                <button class="btn" type="submit"><span
-                                        class="bi bi-search text-white" aria-hidden="true"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- tengo la necesidad de que el boton de busqueda este inserto dentro del search input... -->
-                    <!-- En el hamburguesa se rompe, necesitamos ayuda aquí para la correción-->
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand me-2 text-light" href="../index.html">
+                <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
+                    width="130" height="100" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">
+                        <i class="bi bi-house fs-5"></i>
+                    </a>
+                    <a tabindex="0" class="btn btn-lg text-light text-light enlargeNav fs-5" role="button"
+                        data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Tipo de cuenta"
+                        data-bs-content="Actualmente te encuentras en una cuenta con el Rol de Administrador">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">
+                        <i class="bi bi-x"></i>
+                    </a>
+                    </button>
                 </div>
+                <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
+                    <div class="input-group">
+                        <input class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill"
+                            type="search" placeholder="Buscar..." aria-label="Search" id="searchButton">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit"><span class="bi bi-search text-white"
+                                    aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- tengo la necesidad de que el boton de busqueda este inserto dentro del search input... -->
+                <!-- En el hamburguesa se rompe, necesitamos ayuda aquí para la correción-->
             </div>
-        </nav>
+        </div>
+    </nav>
 
     <main>
         <article class="container my-2">
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-sm-10 col-md-8 col-lg-4">
                     <div class="card rounded-5">
-                        <div class="card-body rounded-5" 
+                        <div class="card-body rounded-5"
                             style="background-image: linear-gradient(to bottom, #000000, #541C8C, #681CB4);">
                             <h5 class="card-title mb-3 text-light"><i>Messi y the World CUP</i></h5>
                             <div class="row mb-3">
@@ -92,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-            </div>   
+            </div>
         </article>
 
         <div class="container my-2">
@@ -109,7 +125,7 @@
                     </button>
                 </div>
             </div>
-    
+
             <div class="row bg-dark">
                 <table class="table text-white" id="tablaPeliculas">
                     <thead>
@@ -128,7 +144,7 @@
             </div>
         </div>
     </main>
-    
+
     <!-- FOOTER PARA TODAS LAS PÁGINAS-->
     <footer class="footer bg-dark">
         <div class="container-fluid">
@@ -146,12 +162,12 @@
                     <!-- esto podría abrir un modal también-->
                 </div>
                 <div class="col-12 col-md-4 text-center my-2">
-                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Envíanos
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../Page/error.html">Envíanos
                         comentarios</a>
                     <!-- esto podría abrír un modal que quede bien-->
                 </div>
                 <div class="col-12 col-md-4 text-center my-2">
-                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Ayuda</a>
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../Page/error.html">Ayuda</a>
                     <!-- esto podría abrir un modal tambien-->
                 </div>
             </div>
@@ -164,7 +180,7 @@
     </footer>
 
     <!--MODAL START-->
-    <div class="modal fade bg-blur" id="examplemodal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade bg-blur" id="examplemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="examplemodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 customModalBackground">
@@ -172,7 +188,7 @@
                     <h5 class="modal-title fs-5 text-white" id="staticBackdropLabel">Agregar Nueva Pelicula/Serie</h5>
                     <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            <!-- AGREGAR MOVIE/SERIE NUEVA-->
+                <!-- AGREGAR MOVIE/SERIE NUEVA-->
                 <form id="form" class="row justify-content-center px-3">
                     <div class="modal-body">
                         <div class="col my-2">
@@ -190,24 +206,27 @@
                         <div class="col my-2">
                             <label for="publicado" class="text-white">Publicado:</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="publicado-input" value="si">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="publicado-input" value="si">
                                 <label class="form-check-label text-white" for="flexRadioDefault1">
-                                  Si
+                                    Si
                                 </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="nopublicado-input" value="no">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="nopublicado-input" value="no">
                                 <label class="form-check-label text-white" for="flexRadioDefault2">
-                                  No
+                                    No
                                 </label>
-                              </div>
+                            </div>
                         </div>
-    
+
                     </div>
                 </form>
 
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-custom  text-white my-2" id="btn-modal-agregar" data-bs-dismiss="modal" aria-label="Close">Agregar</button>
+                    <button class="btn btn-custom  text-white my-2" id="btn-modal-agregar" data-bs-dismiss="modal"
+                        aria-label="Close">Agregar</button>
                     <button class="btn btn-custom text-white my-2" id="btn-modal-limpiar">Limpiar</button>
                     <!-- <input type="submit" value="Guardar" class="btn btn-secondary" data-bs-dismiss="modal"> -->
                 </div>
@@ -215,48 +234,54 @@
         </div>
     </div>
     <!--MODAL END-->
-    
+
     <!-- Modal de Edición -->
     <div class="modal fade bg-blur" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 customModalBackground">
-            <div class="modal-header fs-5">
-            <h5 class="modal-title text-white fs-2" id="miModalLabel">Editor</h5>
-            <button type="button" class="btn-close-warning" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <div class="modal-content border-0 customModalBackground">
+                <div class="modal-header fs-5">
+                    <h5 class="modal-title text-white fs-2" id="miModalLabel">Editor</h5>
+                    <button type="button" class="btn-close-warning" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item bg-dark">
+                            <input type="checkbox" class="checkboxEdicion" id="chkNombre">
+                            <label for="chkNombre label-custom" style="color: #f4e1e1;">Nombre</label>
+                            <input type="text" class="form-control editable-field input-custom" id="txtNombre" disabled
+                                required>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <input type="checkbox" class="checkboxEdicion" id="chkCategoria">
+                            <label for="chkCategoria label-custom" style="color: #f4e1e1;">Categoría</label>
+                            <input type="text" class="form-control editable-field input-custom" id="txtCategoria"
+                                disabled required>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <input type="checkbox" class="checkboxEdicion" id="chkDescripcion">
+                            <label for="chkDescripcion label-custom" style="color: #f4e1e1;">Descripción</label>
+                            <input type="text" class="form-control editable-field input-custom" id="txtDescripcion"
+                                disabled required>
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <input type="checkbox" class="checkboxEdicion" id="chkPublicado">
+                            <label for="chkPublicado" style="color: #f4e1e1;">Publicado (true/false)</label>
+                            <input type="text" class="form-control editable-field input-custom" id="txtPublicado"
+                                disabled required>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom my-2" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom my-2" id="btn-verificar">Verificar</button>
+                    <button type="button" class="btn btn-custom text-white my-2 " id="btn-guardar"
+                        data-bs-dismiss="modal">Guardar</button>
+                </div>
             </div>
-            <div class="modal-body">
-            <ul class="list-group">
-                <li class="list-group-item bg-dark">
-                    <input type="checkbox" class="checkboxEdicion" id="chkNombre">
-                    <label for="chkNombre label-custom" style="color: #f4e1e1;">Nombre</label>
-                    <input type="text" class="form-control editable-field input-custom" id="txtNombre" disabled required>
-                </li>
-                    <li class="list-group-item bg-dark">
-                    <input type="checkbox" class="checkboxEdicion" id="chkCategoria">
-                    <label for="chkCategoria label-custom" style="color: #f4e1e1;">Categoría</label>
-                    <input type="text" class="form-control editable-field input-custom" id="txtCategoria" disabled required>
-                </li>
-                    <li class="list-group-item bg-dark">
-                    <input type="checkbox" class="checkboxEdicion" id="chkDescripcion">
-                    <label for="chkDescripcion label-custom" style="color: #f4e1e1;">Descripción</label>
-                <input type="text" class="form-control editable-field input-custom" id="txtDescripcion" disabled required>
-                </li>
-                    <li class="list-group-item bg-dark">
-                    <input type="checkbox" class="checkboxEdicion" id="chkPublicado">
-                    <label for="chkPublicado" style="color: #f4e1e1;">Publicado (true/false)</label>
-                    <input type="text" class="form-control editable-field input-custom" id="txtPublicado" disabled required>
-                </li>
-            </ul>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-custom my-2" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-custom my-2" id="btn-verificar">Verificar</button>
-            <button type="button" class="btn btn-custom text-white my-2 " id="btn-guardar" data-bs-dismiss="modal">Guardar</button>
-            </div>
-        </div>
         </div>
     </div>
-  
+
     <!-- Fin Modal edición-->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

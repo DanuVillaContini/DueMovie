@@ -16,6 +16,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+    <!-- Etiquetas Meta para SEO -->
+    <meta name="description" content="Página de videos con películas, series y funciones de administración.">
+    <meta name="keywords" content="películas, series, videos, administración">
+    <meta name="author" content="DueMovie">
+
+    <!-- Etiquetas Meta para redes sociales -->
+    <meta property="og:title" content="Página de Videos">
+    <meta property="og:description"
+        content="Disfruta de películas y series en nuestro sitio web. Administra tu contenido fácilmente.">
+
+    <!-- Otros metadatos -->
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
 </head>
 
 <body class="bg-dark" style="overflow-x: hidden;">
@@ -24,29 +39,36 @@
         <!-- Navbar PARA CASI TODAS LAS PÁGINAS -->
         <nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light" id="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand me-2 text-light" href="">
+                <a class="navbar-brand me-2 text-light" href="../index.html">
                     <img class="me-2" src="../Assets/Img/Gral/DueMovie-OnlyIcon.png" class="imgLogo" alt="DueMovie Logo"
                         width="130" height="100" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="/index.html">Principal</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="contact.html">Contacto</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="aboutus.html">Sobre Nosotros</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="register.html">Registrarse</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="login.html">Iniciar</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page"
+                            href="/index.html">Principal</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page"
+                            href="contact.html">Contacto</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="aboutus.html">Sobre
+                            Nosotros</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page"
+                            href="register.html">Registrarse</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page"
+                            href="login.html">Iniciar</a>
                     </div>
                     <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
                         <div class="input-group">
-                            <input class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill" type="search"
-                            placeholder="Buscar..." aria-label="Search" id="searchButton">
+                            <input
+                                class="form-control bg-dark text-white btn-outline-secondary form-custom rounded-pill"
+                                type="search" placeholder="Buscar..." aria-label="Search" id="searchButton">
                             <div class="input-group-append">
-                                <button class="btn" type="submit"><span
-                                        class="bi bi-search text-white" aria-hidden="true"></span>
+                                <button class="btn" type="submit"><span class="bi bi-search text-white"
+                                        aria-hidden="true"></span>
                                 </button>
                             </div>
                         </div>
@@ -56,47 +78,53 @@
                 </div>
             </div>
         </nav>
-    
+
         <div class="flex-container imgContainer">
             <div class="container">
                 <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <form id="formContact" class="w-50 my-5">
-                            
+                    <div class="col-12 d-flex justify-content-center">
+                        <form id="formContact" class="w-100 my-5">
+
                             <div class="form-floating my-3">
-                                <input type="text" class="form-control rounded-3 input-custom" id="floatingInput" required>
+                                <input type="text" class="form-control rounded-3 input-custom" id="floatingInput"
+                                    required>
                                 <label for="floatingInput" class="label-custom">Nombre</label>
                             </div>
                             <!-- Podría también mutar la propiedad "nombre" -->
                             <div class="form-floating my-3">
-                                <input type="email" class="form-control rounded-3 input-custom" id="emailInput" required>
+                                <input type="email" class="form-control rounded-3 input-custom" id="emailInput"
+                                    required>
                                 <label for="floatingInput" class="label-custom">Email</label>
                             </div>
 
                             <div class="form-floating my-3">
-                                <input type="tel" class="form-control rounded-3 input-custom" id="whatsappInput" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" class="form-control rounded-3 input-custom" id="whatsappInput"
+                                    pattern="[0-9]{10}" maxlength="10" required>
                                 <label for="floatingInput" class="label-custom">WhatsApp</label>
                             </div>
 
                             <div class="form-floating my-3">
-                                <input type="text" class="form-control rounded-3 input-custom" id="subjectInput" required>
+                                <input type="text" class="form-control rounded-3 input-custom" id="subjectInput"
+                                    required>
                                 <label for="floatingInput" class="label-custom">Asunto</label>
                             </div>
 
                             <div class="form-floating my-3">
-                                <textarea class="form-control rounded-3 input-custom input-textCustom" id="detailsInput" rows="10" required></textarea>
+                                <textarea class="form-control rounded-3 input-custom input-textCustom" id="detailsInput"
+                                    rows="10" required></textarea>
                                 <label for="floatingInput" class="label-custom">Detalle del contacto</label>
                             </div>
 
                             <div class="container text-center">
-                                <button type="button" class="btn btn-custom my-2" id="enviarContact">¡Contactarnos!</button>
+                                <button type="button" class="btn btn-custom my-2"
+                                    id="enviarContact">¡Contactarnos!</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- FOOTER PARA TODAS LAS PÁGINAS 150/80-->
         <footer class="footer bg-dark">
             <div class="container-fluid">
@@ -114,14 +142,12 @@
                         <!-- esto podría abrir un modal también-->
                     </div>
                     <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page"
-                            href="error.html">Envíanos
+                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="error.html">Envíanos
                             comentarios</a>
                         <!-- esto podría abrír un modal que quede bien-->
                     </div>
                     <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page"
-                            href="error.html">Ayuda</a>
+                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="error.html">Ayuda</a>
                         <!-- esto podría abrir un modal tambien-->
                     </div>
                 </div>

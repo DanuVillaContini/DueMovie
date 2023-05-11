@@ -36,7 +36,7 @@
     font-size: 16px;
     min-height: 48.62em;
     color: #ffff;
-    background-image: linear-gradient(rgba(0, 0, 0, .50) 0%,rgba(0, 0, 0, .50) 100%), url(/IMG/Main/mainMovie.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .50) 0%,rgba(0, 0, 0, .50) 100%), url(../Assets/Img/Main/mainMovie.jpg);
     background-position: center center;
     background-size: cover;
 }
