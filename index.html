@@ -36,12 +36,14 @@
                     <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="./HTML/register.html">Registrarse</a>
                     <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="./HTML/login.html">Iniciar</a>
                 </div>
-                <form class="form-inline my-2 my-lg-0">
-                    <div class="input-group ">
-                        <input class="form-control bg-dark text-white btn-outline-secondary rounded-pill fs-5" type="search"
-                        placeholder="Buscar..."  aria-label="Search">
-                        <div class="input-group-append mx-1">
-                            <button class="btn btn-outline-secondary btt-search-navbar " type="submit"><i class="uil uil-search"></i></button>
+                <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
+                    <div class="input-group">
+                        <input class="form-control  text-white btn-outline-secondary form-custom rounded-pill" type="search"
+                        placeholder="Buscar..." aria-label="Search" id="searchButton">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit"><span
+                                    class="bi bi-search text-white" aria-hidden="true"></span>
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -187,21 +189,29 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center my-1 align-items-center flex-column">
-                    <h2 class="text-light">Due Movie</h2>
-                    <img class="me-2" src="../Assets/Img/Gral/Vector.png" class="imgLogo" alt="vector due" width="190px" height="20px"/>
+                    <h2 class="text-light mt-3">Due Movie</h2>
+                    <img class="me-2" src="../Assets/Img/Gral/Vector.png" class="imgLogo" alt="vector due"
+                        width="190px" height="20px" />
                 </div>
             </div>
             <div class="row my-3">
-            <div class="col-12 col-md-4 text-center my-2">
-                <a class="nav-link text-light enlargeFooter" aria-current="page" href="../error.html">Terminos y Privacidad</a>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="error.html">Terminos y
+                        Privacidad</a>
+                    <!-- esto podría abrir un modal también-->
+                </div>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page"
+                        href="error.html">Envíanos
+                        comentarios</a>
+                    <!-- esto podría abrír un modal que quede bien-->
+                </div>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page"
+                        href="error.html">Ayuda</a>
+                    <!-- esto podría abrir un modal tambien-->
+                </div>
             </div>
-            <div class="col-12 col-md-4 text-center my-2">
-                <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Envíanos comentarios</a>
-            </div>
-            <div class="col-12 col-md-4 text-center my-2">
-                <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Ayuda</a>
-            </div>
-        </div>
             <div class="row my-3">
                 <div class="col text-center">
                     <p class="text-light mx-3">&#169 2023, Due Movie - Todos los derechos reservados.</p>

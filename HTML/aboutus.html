@@ -10,17 +10,22 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="../CSS/globalStyle.css">
-    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="../CSS/about.css">
 
     <!-- ------ LINK FONTS ------ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%22%3E">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700%22%3E">
+
+
 </head>
 
 <body class="bg-dark" style="overflow-x: hidden;">
 
-    <main class="min-h-100">
         <!-- Navbar PARA CASI TODAS LAS PÁGINAS -->
         <nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light" id="navbar">
             <div class="container-fluid">
@@ -36,10 +41,9 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
                         <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="/index.html">Principal</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="./HTML/contact.html">Contacto</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="./HTML/aboutus.html">Sobre Nosotros</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="./HTML/register.html">Registrarse</a>
-                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="./HTML/login.html">Iniciar</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="contact.html">Contacto</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="register.html">Registrarse</a>
+                        <a class="nav-link text-light enlargeNav fs-5 " aria-current="page" href="login.html">Iniciar</a>
                     </div>
                     <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
                         <div class="input-group">
@@ -53,85 +57,145 @@
                             </div>
                         </div>
                     </form>
-                    <!-- tengo la necesidad de que el boton de busqueda este inserto dentro del search input... -->
-                    <!-- En el hamburguesa se rompe, necesitamos ayuda aquí para la correción-->
+
                 </div>
             </div>
         </nav>
 
-        <div class="flex-container imgContainer">
+        <main>
+            
             <div class="container">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <h3 class="w3-center">NUESTRO EQUIPO</h3>
-                        <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-                            <div class="w3-col l3 m6 w3-margin-bottom">
-                                <div class="w3-card">
-                                    <img src="/Assets/Img/Aboutus/1.jpg" alt="DanuVilla" style="width:50%">
-                                    <div class="w3-container">
-                                        <h3>Daniela Villa</h3>
-                                        <p class="w3-opacity">SCROUM MASTER</p>
-                                        <p>AGREGAR DESCRIPCIÓN DE CADA INTEGRANTE.</p>
-                                        <p><button class="w3-button w3-light-grey w3-block"><i
-                                                    class="fa fa-envelope"></i> Contact</button></p>
+                <div class="row d-flex justify-content-center">
+                        <div class="col-3">
+                            <div class="card profile-card-1 rounded-5">
+                                <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background img-fluid"/>
+                                <img src="../IMG/Aboutus/1.jpg" alt="profile-image" class="profile img-fluid"/>
+                                <div class="card-content">
+                                    <h2>Daniela Villa<small>Scrum Master</small></h3>
+                                    <div class="icon-block text-center">
+                                        <a href="https://github.com/DanuVillaContini"><i class="fa fa-github"></i></a>
+                                        <a href="../HTML/error.html"> <i class="fa fa-linkedin"></i></a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="w3-col l3 m6 w3-margin-bottom">
-                                <div class="w3-card">
-                                    <img src="/Assets/Img/Aboutus/2.png" alt="Flor Jorrat" style="width:50%">
-                                    <div class="w3-container">
-                                        <h3>Flor Jorrat</h3>
-                                        <p>AGREGAR DESCRIPCIÓN DE CADA INTEGRANTE.</p>
-                                        <p><button class="w3-button w3-light-grey w3-block"><i
-                                                    class="fa fa-envelope"></i> Contact</button></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l3 m6 w3-margin-bottom">
-                                <div class="w3-card">
-                                    <img src="/Assets/Img/Aboutus/3.png" alt="Francisco Perez" style="width:50%">
-                                    <div class="w3-container">
-                                        <h3>Francisco Perez</h3>
-                                        <p>AGREGAR DESCRIPCIÓN DE CADA INTEGRANTE.</p>
-                                        <p><button class="w3-button w3-light-grey w3-block"><i
-                                                    class="fa fa-envelope"></i> Contact</button></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l3 m6 w3-margin-bottom">
-                                <div class="w3-card">
-                                    <img src="/Assets/Img/Aboutus/4.png" alt="Gisela Delgado" style="width:50%">
-                                    <div class="w3-container">
-                                        <h3>Gisela Delgado</h3>
-                                        <p>AGREGAR DESCRIPCIÓN DE CADA INTEGRANTE</p>
-                                        <p><button class="w3-button w3-light-grey w3-block"><i
-                                                    class="fa fa-envelope"></i> Contact</button></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l3 m6 w3-margin-bottom">
-                                <div class="w3-card">
-                                    <img src="/Assets/Img/Aboutus/5.jpg" alt="Tania Santucho" style="width:50%">
-                                    <div class="w3-container">
-                                        <h3>Tania Santucho</h3>
-                                        <p>AGREGAR DESCRIPCIÓN DE CADA INTEGRANTE</p>
-                                        <p><button class="w3-button w3-light-grey w3-block"><i
-                                                    class="fa fa-envelope"></i> Contact</button></p>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> <!-- fin card-->
                         </div>
+
+                        <div class="col-3">
+                            <div class="card profile-card-1 rounded-5">
+                                <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background img-fluid"/>
+                                <img src="../IMG/Aboutus/5.jpg" alt="profile-image" class="profile img-fluid"/>
+                                <div class="card-content">
+                                    <h2>Tania Santucho<small>Developer</small></h3>
+                                    <div class="icon-block text-center">
+                                        <a href="https://github.com/TaniaSantucho"><i class="fa fa-github"></i></a>
+                                        <a href="../HTML/error.html"> <i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div> <!-- fin card-->
+                        </div>
+
+                        <div class="col-3">
+                            <div class="card profile-card-1 rounded-5">
+                                <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background img-fluid"/>
+                                <img src="../IMG/Aboutus/3.png" alt="profile-image" class="profile img-fluid"/>
+                                <div class="card-content">
+                                    <h2>Francisco Perez<small>Developer</small></h3>
+                                    <div class="icon-block text-center">
+                                        <a href="https://github.com/FranprzDev"><i class="fa fa-github"></i></a>
+                                        <a href="../HTML/error.html"> <i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div> <!-- fin card-->
+                        </div>
+                </div> <!-- fin de row-->
+                <div class="row my-2 d-flex justify-content-center">
+                    <div class="col-3">
+                        <div class="card profile-card-1 rounded-5">
+                            <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background img-fluid"/>
+                            <img src="../IMG/Aboutus/2.png" alt="profile-image" class="profile img-fluid"/>
+                            <div class="card-content">
+                                <h2>Flor Jorrat<small>Developer</small></h3>
+                                <div class="icon-block text-center">
+                                    <a href="../HTML/error.html"><i class="fa fa-github"></i></a>
+                                    <a href="../HTML/error.html"> <i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div> <!-- fin card-->
                     </div>
 
+                    <div class="col-3">
+                        <div class="card profile-card-1 rounded-5">
+                            <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background img-fluid"/>
+                            <img src="../IMG/Aboutus/4.png" alt="profile-image" class="profile img-fluid"/>
+                            <div class="card-content">
+                                <h2>Gisella Delgado<small>Developer</small></h3>
+                                <div class="icon-block text-center">
+                                    <a href="https://github.com/gidelgado"><i class="fa fa-github"></i></a>
+                                    <a href="../HTML/error.html"> <i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div> <!-- fin card-->
+                    </div>
+                </div> <!-- fin de row-->
+            </div>
 
-
+        </main>
+        <!-- <div class="container ">
+            <div class="row">
+                <h3 class="w3-center">NUESTRO EQUIPO</h3>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-card text-center">
+                        <img src="../Aboutus/1.jpg" alt="DanuVilla" style="width:50%">
+                        <div class="w3-container d-flex flex-column justify-content-center">
+                            <h3 class="text-white fs-3">Daniela Villa</h3>
+                            <p class="w3-opacity text-white fs-5">DEVELOPER</p>
+                            <button type="button" class="btn btn-primary my-2 close btn-custom ">Contacto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-card text-center">
+                        <img src="../Aboutus/2.png" alt="Flor Jorrat" style="width:50%">
+                        <div class="w3-container d-flex flex-column justify-content-center">
+                            <h3 class="text-white fs-3">Tania Santucho</h3>
+                            <p class="w3-opacity text-white fs-5">DEVELOPER</p>
+                            <button type="button" class="btn btn-primary my-2 close btn-custom text-white" href="../HTML/error.html">Contacto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-card text-center">
+                        <img src="../Aboutus/3.png" alt="Francisco Perez" style="width:50%">
+                        <div class="w3-container d-flex flex-column justify-content-center">
+                            <h3 class="text-white fs-3">Francisco Perez</h3>
+                            <p class="w3-opacity text-white fs-5">DEVELOPER</p>
+                            <button type="button" class="btn btn-primary my-2 close btn-custom" href="../HTML/error.html">Contacto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-card text-center">
+                        <img src="../Aboutus/4.png" alt="Gisela Delgado" style="width:50%">
+                        <div class="w3-container d-flex flex-column justify-content-center">
+                            <h3 class="text-white fs-3">Gisela Delgado</h3>
+                            <p class="w3-opacity text-white fs-5">DEVELOPER</p>
+                            <button type="button" class="btn btn-primary my-2 close btn-custom" href="../HTML/error.html">Contacto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-card text-center">
+                        <img src="../Aboutus/5.jpg" alt="Tania Santucho" style="width:50%">
+                        <div class="w3-container d-flex flex-column justify-content-center">
+                            <h3 class="text-white fs-3">Tania Santucho</h3>
+                            <p class="w3-opacity text-white fs-5">DEVELOPER</p>
+                            <button type="button" class="btn btn-primary my-2 close btn-custom" href="../HTML/error.html">Contacto</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-
-        <!-- FOOTER PARA TODAS LAS PÁGINAS 150/80-->
+        </div> -->
+        
         <footer class="footer bg-dark">
             <div class="container-fluid">
                 <div class="row">
@@ -143,19 +207,19 @@
                 </div>
                 <div class="row my-3">
                     <div class="col-12 col-md-4 text-center my-2">
-                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="../error.html">Terminos y
+                        <a class="nav-link text-light enlargeFooter" aria-current="page" href="error.html">Terminos y
                             Privacidad</a>
                         <!-- esto podría abrir un modal también-->
                     </div>
                     <div class="col-12 col-md-4 text-center my-2">
                         <a class="nav-link text-light enlargeFooter" aria-current="page"
-                            href="../HTML/error.html">Envíanos
+                            href="error.html">Envíanos
                             comentarios</a>
                         <!-- esto podría abrír un modal que quede bien-->
                     </div>
                     <div class="col-12 col-md-4 text-center my-2">
                         <a class="nav-link text-light enlargeFooter" aria-current="page"
-                            href="../HTML/error.html">Ayuda</a>
+                            href="error.html">Ayuda</a>
                         <!-- esto podría abrir un modal tambien-->
                     </div>
                 </div>
