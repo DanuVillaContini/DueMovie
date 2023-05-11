@@ -36,7 +36,6 @@
                         <a class="nav-link text-light enlargeNav fs-5" aria-current="page" href="../index.html">
                             <i class="bi bi-x"></i>
                         </a>
-                        
                         </button>
                     </div>
                     <form class="form-inline my-2 my-lg-0 border border-secondary rounded-pill">
@@ -59,7 +58,7 @@
     <main>
         <article class="container my-2">
             <div class="row d-flex justify-content-center">
-                <div class="col-4">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-4">
                     <div class="card rounded-5">
                         <div class="card-body rounded-5" 
                             style="background-image: linear-gradient(to bottom, #000000, #541C8C, #681CB4);">
@@ -102,7 +101,7 @@
                 <div class="col-6 ">
                     <h1 class="text-center text-custom"><i>Administración de Peliculas</i></h1>
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-5 col-md-4 text-center">
                     <button id="btn-modal" type="button" class="btn btn-custom my-2" data-bs-toggle="modal"
                         data-bs-target="#examplemodal">
                         <i class="bi bi-plus"></i>
@@ -130,51 +129,75 @@
         </div>
     </main>
     
+    <!-- FOOTER PARA TODAS LAS PÁGINAS-->
+    <footer class="footer bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center my-1 align-items-center flex-column">
+                    <h2 class="text-light mt-3">Due Movie</h2>
+                    <img class="me-2" src="../Assets/Img/Gral/Vector.png" class="imgLogo" alt="vector due" width="190px"
+                        height="20px" />
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../error.html">Terminos y
+                        Privacidad</a>
+                    <!-- esto podría abrir un modal también-->
+                </div>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Envíanos
+                        comentarios</a>
+                    <!-- esto podría abrír un modal que quede bien-->
+                </div>
+                <div class="col-12 col-md-4 text-center my-2">
+                    <a class="nav-link text-light enlargeFooter" aria-current="page" href="../HTML/error.html">Ayuda</a>
+                    <!-- esto podría abrir un modal tambien-->
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col text-center">
+                    <p class="text-light mx-3">&#169 2023, Due Movie - Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!--MODAL START-->
-    <div class="modal fade" id="examplemodal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade bg-blur" id="examplemodal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="examplemodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Agregar Nuevo Pelicula/Serie</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0 customModalBackground">
+                <div class="modal-header fs-5">
+                    <h5 class="modal-title fs-5 text-white" id="staticBackdropLabel">Agregar Nueva Pelicula/Serie</h5>
+                    <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             <!-- AGREGAR MOVIE/SERIE NUEVA-->
-                <form id="form" class="row justify-content-center">
+                <form id="form" class="row justify-content-center px-3">
                     <div class="modal-body">
-                        <!-- <div class="col">
-                            <label for="codigo">Código:</label>
-                            <input type="number" id="codigo-input" name="codigo" required>
-                        </div> -->
                         <div class="col my-2">
-                            <label for="nombre">Nombre de película/serie:</label>
-                            <input type="text" id="nombre-input" name="nombre" required>
+                            <label for="chkNombre label-custom" style="color: #f4e1e1;">Nombre</label>
+                            <input type="text" class="form-control editable-field input-custom" id="nombre-input" required>
                         </div>
                         <div class="col my-2">
-                            <label for="categoria">Categoría:</label>
-                            <input type="text" id="categoria-input" name="categoria" required>
+                            <label for="chkNombre label-custom" style="color: #f4e1e1;">Categoría</label>
+                            <input type="text" class="form-control editable-field input-custom" id="categoria-input" required>
                         </div>
                         <div class="col my-2">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea id="descripcion-input" name="descripcion" required></textarea>
+                            <label for="chkNombre label-custom" style="color: #f4e1e1;">Descripción</label>
+                            <input type="text" class="form-control editable-field input-custom" id="descripcion-input" required>
                         </div>
-
-                        <!-- <div class="col my-3">
-                            <label for="formFile" class="form-label">Portada:</label>
-                            <input class="form-control" type="file" id="formFile">
-                        </div> -->
-
                         <div class="col my-2">
-                            <label for="publicado">Publicado:</label>
+                            <label for="publicado" class="text-white">Publicado:</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="publicado-input" value="si">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                                <label class="form-check-label text-white" for="flexRadioDefault1">
                                   Si
                                 </label>
                               </div>
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="nopublicado-input" value="no">
-                                <label class="form-check-label" for="flexRadioDefault2">
+                                <label class="form-check-label text-white" for="flexRadioDefault2">
                                   No
                                 </label>
                               </div>
@@ -184,63 +207,41 @@
                 </form>
 
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-warning text-dark" id="btn-modal-agregar">Agregar</button>
-                    <button class="btn btn-warning text-dark" id="btn-modal-limpiar">Limpiar</button>
+                    <button class="btn btn-custom  text-white my-2" id="btn-modal-agregar">Agregar</button>
+                    <button class="btn btn-custom text-white my-2" id="btn-modal-limpiar">Limpiar</button>
                     <!-- <input type="submit" value="Guardar" class="btn btn-secondary" data-bs-dismiss="modal"> -->
                 </div>
             </div>
         </div>
     </div>
     <!--MODAL END-->
-
-    <!-- Modal de error -->
-    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Error</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Ha ocurrido un error.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FIN Modal de error -->
     
     <!-- Modal de Edición -->
-    <!-- Cambios en el HTML -->
     <div class="modal fade bg-blur" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 bg-black">
+        <div class="modal-content border-0 customModalBackground">
             <div class="modal-header fs-5">
-            <h5 class="modal-title fs-2" id="miModalLabel">Editor</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <h5 class="modal-title text-white fs-2" id="miModalLabel">Editor</h5>
+            <button type="button" class="btn-close-warning" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
             <ul class="list-group">
-                <li class="list-group-item customModalBackground">
+                <li class="list-group-item bg-dark">
                     <input type="checkbox" class="checkboxEdicion" id="chkNombre">
                     <label for="chkNombre label-custom" style="color: #f4e1e1;">Nombre</label>
                     <input type="text" class="form-control editable-field input-custom" id="txtNombre" disabled required>
                 </li>
-                    <li class="list-group-item customModalBackground">
+                    <li class="list-group-item bg-dark">
                     <input type="checkbox" class="checkboxEdicion" id="chkCategoria">
                     <label for="chkCategoria label-custom" style="color: #f4e1e1;">Categoría</label>
                     <input type="text" class="form-control editable-field input-custom" id="txtCategoria" disabled required>
                 </li>
-                    <li class="list-group-item customModalBackground">
+                    <li class="list-group-item bg-dark">
                     <input type="checkbox" class="checkboxEdicion" id="chkDescripcion">
                     <label for="chkDescripcion label-custom" style="color: #f4e1e1;">Descripción</label>
                 <input type="text" class="form-control editable-field input-custom" id="txtDescripcion" disabled required>
                 </li>
-                    <li class="list-group-item customModalBackground">
+                    <li class="list-group-item bg-dark">
                     <input type="checkbox" class="checkboxEdicion" id="chkPublicado">
                     <label for="chkPublicado" style="color: #f4e1e1;">Publicado (true/false)</label>
                     <input type="text" class="form-control editable-field input-custom" id="txtPublicado" disabled required>
@@ -248,9 +249,9 @@
             </ul>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-secondary" id="btn-verificar">Verificar</button>
-            <button type="button" class="btn btn-secondary" id="btn-guardar" data-bs-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-custom my-2" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-custom my-2" id="btn-verificar">Verificar</button>
+            <button type="button" class="btn btn-custom text-white my-2 " id="btn-guardar" data-bs-dismiss="modal">Guardar</button>
             </div>
         </div>
         </div>

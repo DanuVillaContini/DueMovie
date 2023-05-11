@@ -75,8 +75,6 @@ let nombre
 let categoria 
 let descripcion
 let publicado
-let publicadoChange
-
 
 /*
     FUNCIONES [AQUÍ ESTÁN TODAS LAS FUNCIONES]
@@ -300,7 +298,7 @@ function createMovie (event){
     actualizarPeliculasPorLocalStorage()
 }
 
-function realizarCambio(nombre, categoria, descripcion, publicadoChange){
+function realizarCambio(nombre, categoria, descripcion, valor){
     let pelisJSON = localStorage.getItem('pelis');
     let pelisArray = JSON.parse(pelisJSON);
     
@@ -313,23 +311,19 @@ function realizarCambio(nombre, categoria, descripcion, publicadoChange){
     pelisArray._peliculaArray[valorArray-1]._nombre = nombre
     pelisArray._peliculaArray[valorArray-1]._categoria = categoria
     pelisArray._peliculaArray[valorArray-1]._descripcion = descripcion
-    pelisArray._peliculaArray[valorArray-1]._publicado = publicado
+    pelisArray._peliculaArray[valorArray-1]._publicado = valor
     guardarPeliculas(pelisArray)
     borrarContenidoTabla()
     actualizarPeliculasPorLocalStorage()
 }
 
-// Eventos
-
-// Evento que recibe los datos del form
+// EVENTOS
 
 btnAgregar.addEventListener('click', createMovie)
 
 // Evento que limpia los botones
 
 btnLimpiar.addEventListener('click', limpiarInputs)
-
-
 
 // Este hace que cada vez que entre a la página carge lo que exista en el localStorage.
 document.addEventListener('DOMContentLoaded', ()=> {
@@ -338,12 +332,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     biblioteca = new Biblioteca()
     let pelisArray = JSON.parse(localStorage.getItem('pelis'));
-    let cantidadElementos = pelisArray._peliculaArray.length 
+    let cantidadElementos = pelisArray._peliculaArray.length
     for(let i = 0; i < cantidadElementos; i++){
         biblioteca.agregarPelicula(pelisArray._peliculaArray[0])
     }
 });
 
+// BOTONES
 btnVerificar.addEventListener('click', (e) => {
     e.preventDefault();
     nombre = document.getElementById('txtNombre').value
@@ -362,12 +357,38 @@ btnVerificar.addEventListener('click', (e) => {
 
 btnGuardar.addEventListener('click', (e) => {
     e.preventDefault()
+
+    nombreCheckbox = document.getElementById('chkPublicado')
+    categoriaCheckbox = document.getElementById('chkCategoria')
+    descripcionCheckbox = document.getElementById('chkDescripcion')
+    publicadoCheckbox = document.getElementById('chkPublicado')
+
     console.log('Se registró correctamente los datos; se cambiará el objeto ' + valorArray)
     // cambio
-    if(publicado == 'true'){
-        publicadoChange = true
+    if(publicado == 'true' || publicado == 'TRUE'){
+        realizarCambio(nombre, categoria, descripcion, true)
+        // Realizo cambio, deshabilito boton y borro inputs
+        btnGuardar.disabled = true
+        nombre = ''
+        categoria = ''
+        descripcion = ''
+        publicado = ''
+        nombreCheckbox.checked = false
+        categoriaCheckbox.checked = false
+        descripcionCheckbox.checked = false
+        publicadoCheckbox.checked = false
     }else{
-        publicadoChange = false
+        realizarCambio(nombre, categoria, descripcion, false)
+        // Realizo cambio, deshabilito boton y borro inputs
+        btnGuardar.disabled = true
+        nombre = ''
+        categoria = ''
+        descripcion = ''
+        publicado = ''
+        nombreCheckbox.checked = false
+        categoriaCheckbox.checked = false
+        descripcionCheckbox.checked = false
+        publicadoCheckbox.checked = false
     }
 
     realizarCambio(nombre, categoria, descripcion, publicadoChange)
